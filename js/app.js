@@ -13,7 +13,7 @@ function eventListeners() {
 
     // Cuando el documento este listo, obtiene LocalStorage
     document.addEventListener('DOMContentLoaded', () => {
-        tweets = JSON.parse(localStorage.getItem('tweets'));
+        tweets = JSON.parse(localStorage.getItem('tweets')) || [];
         crearHTML(tweets);
     });
 }
